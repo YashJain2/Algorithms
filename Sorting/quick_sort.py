@@ -39,3 +39,5 @@ if __name__=='__main__':
     input_list = [2,5,6,5,34,11,23,0,3]
     quicksort(input_list)
     print(input_list)
+# output - [0, 2, 3, 5, 5, 6, 11, 23, 34]
+
