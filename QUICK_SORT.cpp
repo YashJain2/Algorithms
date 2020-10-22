@@ -46,4 +46,8 @@ int main() {
         cout<<arr[i]<<" ";
     }
     return 0;
+
 }
+
+//OUTPUT:
+//1 2 3 4 6
