@@ -13,6 +13,7 @@ class QuickSortJava
         {
             System.out.print(j + "\t");
         }
+        //Output 1	3	6	9	23
     }
 
     public int partition(int [] arr, int first, int last)
