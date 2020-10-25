@@ -6,6 +6,11 @@ class MatrixChainMultiplication {
 			return 0;
 
 		int min = Integer.MAX_VALUE;
+		        // place parenthesis at different places between
+        // first and last matrix, recursively calculate
+        // count of multiplications for each parenthesis
+        // placement and return the minimum count
+
 		for (int k = i; k < j; k++) 
 		{
 			int count = MatrixChainOrder(p, i, k)
@@ -15,8 +20,10 @@ class MatrixChainMultiplication {
 			if (count < min)
 				min = count;
 		}
+		        // Return minimum count
         		return min;
 	}
+    // Driver code
 	public static void main(String args[])
 	{
 		int arr[] = new int[] { 1, 2, 3, 4, 3 };
@@ -26,3 +33,4 @@ class MatrixChainMultiplication {
 			+ MatrixChainOrder(arr, 1, n - 1));
 	}
 }
+O/P:Minimum number of multiplications is 30

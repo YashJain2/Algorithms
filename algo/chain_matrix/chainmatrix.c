@@ -1,5 +1,6 @@
 #include <limits.h>
 #include <stdio.h>
+// Matrix Ai has dimension p[i-1] x p[i] for i = 1..n
 int MatrixChainOrder(int p[], int i, int j)
 {
     if (i == j)
@@ -7,6 +8,11 @@ int MatrixChainOrder(int p[], int i, int j)
     int k;
     int min = INT_MAX;
     int count;
+        // place parenthesis at different places between first
+    // and last matrix, recursively calculate count of
+    // multiplications for each parenthesis placement and
+    // return the minimum count
+
     for (k = i; k < j; k++) 
     {
         count = MatrixChainOrder(p, i, k)
@@ -16,8 +22,11 @@ int MatrixChainOrder(int p[], int i, int j)
         if (count < min)
             min = count;
     }
+        // Return minimum count
     return min;
 }
+
+// Driver code
 int main()
 {
     int arr[] = { 1, 2, 3, 4, 3 };
@@ -29,3 +38,4 @@ int main()
     getchar();
     return 0;
 }
+O/P: Minimum number of multiplications is 30
